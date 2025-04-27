@@ -9,8 +9,8 @@ import requests
 INPUT_BUCKET = "minute-maker-input"
 OUTPUT_BUCKET = "minute-maker-output"
 
-aws_access_key = st.secrets["AWS_ACCESS_KEY_ID"]
-aws_secret_key = st.secrets["AWS_SECRET_ACCESS_KEY"]
+AWS_ACCESS_KEY = st.secrets["AWS_ACCESS_KEY_ID"]
+AWS_SECRET_KEY = st.secrets["AWS_SECRET_ACCESS_KEY"]
 region = st.secrets.get("AWS_REGION", "us-east-1")
 
 # API Endpoint for Processing
