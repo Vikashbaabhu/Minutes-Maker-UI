@@ -6,12 +6,12 @@ import os
 import time
 import requests
 
-# AWS Credentials
-AWS_ACCESS_KEY = "AKIAXKUH3BLUDDKAZEG5"
-AWS_SECRET_KEY = "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"
-
 INPUT_BUCKET = "minute-maker-input"
 OUTPUT_BUCKET = "minute-maker-output"
+
+aws_access_key = st.secrets["AWS_ACCESS_KEY_ID"]
+aws_secret_key = st.secrets["AWS_SECRET_ACCESS_KEY"]
+region = st.secrets.get("AWS_REGION", "us-east-1")
 
 # API Endpoint for Processing
 PROCESSING_API_URL = "https://iniyxycalb.execute-api.us-east-1.amazonaws.com/prod/upload"
